@@ -9,6 +9,7 @@ import React from "react";
 import bimage from "../../assets/images/BG.png";
 import MessageCom from "../components/Message/MessageCom";
 import messages from "../../assets/data/messages.json";
+import InputBox from "../components/InputBox/InputBox";
 // import MessageCom from
 
 const InboxScreen = () => {
@@ -20,6 +21,7 @@ const InboxScreen = () => {
         style={styles.list}
         inverted
       />
+    <InputBox/> 
     </ImageBackground>
   );
 };

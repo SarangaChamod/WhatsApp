@@ -4,6 +4,7 @@ import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 dayjs.extend(relativeTime);
 
+
 const MessageCom = ({ message }) => {
   const isMyMessage = () => {
     return message.user.id == "u1";
@@ -22,20 +23,33 @@ const MessageCom = ({ message }) => {
   );
 };
 
-// video watch from at 1.27.00
+
 
 const styles = StyleSheet.create({
   container: {
     margin: 5,
     padding: 10,
     borderRadius: 10,
-    maxWidth: "80%",
+    maxWidth: "80%",  
+
+      // Shadows
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.22,
+    shadowRadius: 2.22,
+
+    elevation: 2,
+
+    // video watch from at 1.34.00
   },
   time: {
     color: "gray",
     alignSelf: "flex-end",
   },
 
-  // chat background color code - 025C4C
+  
 });
 export default MessageCom;

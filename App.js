@@ -4,6 +4,7 @@ import ChatListItem from "./src/components/ChatListItem/profile";
 import ChatScreen from "./src/screens/ChatScreen";
 import InboxScreen from "./src/screens/InboxScreen";
 
+
 export default function App() {
   return (
     <View style={styles.container}>
@@ -20,4 +21,3 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 });
-//test
