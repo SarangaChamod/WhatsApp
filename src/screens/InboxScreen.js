@@ -4,6 +4,8 @@ import {
   ImageBackground,
   StyleSheet,
   FlatList,
+  KeyboardAvoidingView,
+  Platform,
 } from "react-native";
 import React from "react";
 import bimage from "../../assets/images/BG.png";
@@ -14,6 +16,8 @@ import InputBox from "../components/InputBox/InputBox";
 
 const InboxScreen = () => {
   return (
+    <KeyboardAvoidingView behavior={Platform.OS === 'iso' ? 'padding' : 'height'}
+    style={styles.bimage}>
     <ImageBackground source={bimage} style={styles.bimage}>
       <FlatList
         data={messages}
@@ -23,6 +27,7 @@ const InboxScreen = () => {
       />
     <InputBox/> 
     </ImageBackground>
+    </KeyboardAvoidingView>
   );
 };
 
