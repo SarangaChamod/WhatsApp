@@ -4,17 +4,18 @@ import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 dayjs.extend(relativeTime);
 
-
 const MessageCom = ({ message }) => {
   const isMyMessage = () => {
     return message.user.id == "u1";
   };
   return (
     <View
-      style= {[
+      style={[
         styles.container,
-        { backgroundColor: isMyMessage() ? '#DCF8C5' : 'white',
-          alignSelf: isMyMessage() ? "flex-end" : 'flex-start' },
+        {
+          backgroundColor: isMyMessage() ? "#DCF8C5" : "white",
+          alignSelf: isMyMessage() ? "flex-end" : "flex-start",
+        },
       ]}
     >
       <Text>{message.text}</Text>
@@ -23,17 +24,15 @@ const MessageCom = ({ message }) => {
   );
 };
 
-
-
 const styles = StyleSheet.create({
   container: {
     margin: 5,
     padding: 10,
     borderRadius: 10,
-    maxWidth: "80%",  
+    maxWidth: "80%",
 
-      // Shadows
-    shadowColor: '#000',
+    // Shadows
+    shadowColor: "#000",
     shadowOffset: {
       width: 0,
       height: 1,
@@ -49,7 +48,5 @@ const styles = StyleSheet.create({
     color: "gray",
     alignSelf: "flex-end",
   },
-
-  
 });
 export default MessageCom;
